@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jwelleryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminloginMst">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrandMst">
+    <Key>
+      <PropertyRef Name="Brand_ID" />
+    </Key>
+    <Property Name="Brand_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Brand_Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CartList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Product_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MRP" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatMst">
+    <Key>
+      <PropertyRef Name="Cat_ID" />
+    </Key>
+    <Property Name="Cat_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cat_Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CertifyMst">
+    <Key>
+      <PropertyRef Name="Certify_ID" />
+    </Key>
+    <Property Name="Certify_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Certify" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DimInfoMst">
+    <Key>
+      <PropertyRef Name="DimID" />
+    </Key>
+    <Property Name="DimID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DimType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DimCrt" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DimPrice" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="DimImg" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'jwellery.dbo.DimMst' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DimMst">
+    <Key>
+      <PropertyRef Name="Dim_Crt" />
+      <PropertyRef Name="Dim_Pcs" />
+      <PropertyRef Name="Dim_Gm" />
+      <PropertyRef Name="Dim_Size" />
+      <PropertyRef Name="Dim_Rate" />
+      <PropertyRef Name="Dim_Amt" />
+    </Key>
+    <Property Name="Style_Code" Type="varchar" MaxLength="50" />
+    <Property Name="DimQlty_ID" Type="nchar" MaxLength="10" />
+    <Property Name="DimSubType_ID" Type="nchar" MaxLength="10" />
+    <Property Name="Dim_Crt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Dim_Pcs" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Dim_Gm" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Dim_Size" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Dim_Rate" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Dim_Amt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DimQltyMst">
+    <Key>
+      <PropertyRef Name="DimQly_ID" />
+    </Key>
+    <Property Name="DimQly_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeimQly" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DimQlySubMst">
+    <Key>
+      <PropertyRef Name="DimSubType_ID" />
+    </Key>
+    <Property Name="DimSubType_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DimQlty" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GoldKrtMst">
+    <Key>
+      <PropertyRef Name="GoldType_ID" />
+    </Key>
+    <Property Name="GoldType_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Gold_Crt" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inquiry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="EmailID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Comment" Type="varchar(max)" Nullable="false" />
+    <Property Name="Cdate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemMst">
+    <Key>
+      <PropertyRef Name="Style_Code" />
+    </Key>
+    <Property Name="Style_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pairs" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="Brand_Id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Quantity" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Cat_Id" Type="nchar" MaxLength="10" />
+    <Property Name="Prod_Quality" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Certify_ID" Type="nchar" MaxLength="10" />
+    <Property Name="Prod_ID" Type="nchar" MaxLength="10" />
+    <Property Name="GoldType_ID" Type="nchar" MaxLength="10" />
+    <Property Name="Gold_Wt" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Stone_Wt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Net_Gold" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Wstg_Per" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Wstg" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Tot_Gross_Wt" Type="numeric" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="Gold_Rate" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Gold_Amt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Gold_Making" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Stone_Making" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Other_Making" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Tot_Making" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="MRP" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JewelTypeMst">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Jewellery_Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProdMst">
+    <Key>
+      <PropertyRef Name="Prod_ID" />
+    </Key>
+    <Property Name="Prod_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Prod_Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="StoneMst">
+    <Key>
+      <PropertyRef Name="Stone_Gm" />
+      <PropertyRef Name="Stone_Pcs" />
+      <PropertyRef Name="Stone_Crt" />
+      <PropertyRef Name="Stone_Rate" />
+      <PropertyRef Name="Stone_Amt" />
+    </Key>
+    <Property Name="Style_Code" Type="varchar" MaxLength="50" />
+    <Property Name="StoneQlty_ID" Type="nchar" MaxLength="10" />
+    <Property Name="Stone_Gm" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Stone_Pcs" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Stone_Crt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Stone_Rate" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Stone_Amt" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoneQltyMst">
+    <Key>
+      <PropertyRef Name="StoneQlty_ID" />
+    </Key>
+    <Property Name="StoneQlty_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="StoneQlty" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserRegMst">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="userFname" Type="text" Nullable="false" />
+    <Property Name="userLname" Type="text" Nullable="false" />
+    <Property Name="address" Type="varchar(max)" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mobNo" Type="text" Nullable="false" />
+    <Property Name="emailID" Type="text" Nullable="false" />
+    <Property Name="dob" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cdate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__DimMst__DimQlty___276EDEB3">
+    <End Role="DimQltyMst" Type="Self.DimQltyMst" Multiplicity="0..1" />
+    <End Role="DimMst" Type="Self.DimMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimQltyMst">
+        <PropertyRef Name="DimQly_ID" />
+      </Principal>
+      <Dependent Role="DimMst">
+        <PropertyRef Name="DimQlty_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DimMst__DimSubTy__286302EC">
+    <End Role="DimQlySubMst" Type="Self.DimQlySubMst" Multiplicity="0..1" />
+    <End Role="DimMst" Type="Self.DimMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimQlySubMst">
+        <PropertyRef Name="DimSubType_ID" />
+      </Principal>
+      <Dependent Role="DimMst">
+        <PropertyRef Name="DimSubType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DimMst__Style_Co__267ABA7A">
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="0..1" />
+    <End Role="DimMst" Type="Self.DimMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemMst">
+        <PropertyRef Name="Style_Code" />
+      </Principal>
+      <Dependent Role="DimMst">
+        <PropertyRef Name="Style_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMst__Brand_I__20C1E124">
+    <End Role="BrandMst" Type="Self.BrandMst" Multiplicity="1" />
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrandMst">
+        <PropertyRef Name="Brand_ID" />
+      </Principal>
+      <Dependent Role="ItemMst">
+        <PropertyRef Name="Brand_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMst__Cat_Id__21B6055D">
+    <End Role="CatMst" Type="Self.CatMst" Multiplicity="0..1" />
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMst">
+        <PropertyRef Name="Cat_ID" />
+      </Principal>
+      <Dependent Role="ItemMst">
+        <PropertyRef Name="Cat_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMst__Certify__22AA2996">
+    <End Role="CertifyMst" Type="Self.CertifyMst" Multiplicity="0..1" />
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CertifyMst">
+        <PropertyRef Name="Certify_ID" />
+      </Principal>
+      <Dependent Role="ItemMst">
+        <PropertyRef Name="Certify_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMst__GoldTyp__24927208">
+    <End Role="GoldKrtMst" Type="Self.GoldKrtMst" Multiplicity="0..1" />
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GoldKrtMst">
+        <PropertyRef Name="GoldType_ID" />
+      </Principal>
+      <Dependent Role="ItemMst">
+        <PropertyRef Name="GoldType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemMst__Prod_ID__239E4DCF">
+    <End Role="ProdMst" Type="Self.ProdMst" Multiplicity="0..1" />
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdMst">
+        <PropertyRef Name="Prod_ID" />
+      </Principal>
+      <Dependent Role="ItemMst">
+        <PropertyRef Name="Prod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StoneMst__StoneQ__37A5467C">
+    <End Role="StoneQltyMst" Type="Self.StoneQltyMst" Multiplicity="0..1" />
+    <End Role="StoneMst" Type="Self.StoneMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StoneQltyMst">
+        <PropertyRef Name="StoneQlty_ID" />
+      </Principal>
+      <Dependent Role="StoneMst">
+        <PropertyRef Name="StoneQlty_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StoneMst__Style___36B12243">
+    <End Role="ItemMst" Type="Self.ItemMst" Multiplicity="0..1" />
+    <End Role="StoneMst" Type="Self.StoneMst" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemMst">
+        <PropertyRef Name="Style_Code" />
+      </Principal>
+      <Dependent Role="StoneMst">
+        <PropertyRef Name="Style_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="jwelleryModelStoreContainer">
+    <EntitySet Name="AdminloginMst" EntityType="Self.AdminloginMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandMst" EntityType="Self.BrandMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartList" EntityType="Self.CartList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatMst" EntityType="Self.CatMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CertifyMst" EntityType="Self.CertifyMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimInfoMst" EntityType="Self.DimInfoMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimQltyMst" EntityType="Self.DimQltyMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimQlySubMst" EntityType="Self.DimQlySubMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GoldKrtMst" EntityType="Self.GoldKrtMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inquiry" EntityType="Self.Inquiry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemMst" EntityType="Self.ItemMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JewelTypeMst" EntityType="Self.JewelTypeMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProdMst" EntityType="Self.ProdMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StoneQltyMst" EntityType="Self.StoneQltyMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRegMst" EntityType="Self.UserRegMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DimMst" EntityType="Self.DimMst" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DimMst].[Style_Code] AS [Style_Code], 
+    [DimMst].[DimQlty_ID] AS [DimQlty_ID], 
+    [DimMst].[DimSubType_ID] AS [DimSubType_ID], 
+    [DimMst].[Dim_Crt] AS [Dim_Crt], 
+    [DimMst].[Dim_Pcs] AS [Dim_Pcs], 
+    [DimMst].[Dim_Gm] AS [Dim_Gm], 
+    [DimMst].[Dim_Size] AS [Dim_Size], 
+    [DimMst].[Dim_Rate] AS [Dim_Rate], 
+    [DimMst].[Dim_Amt] AS [Dim_Amt]
+    FROM [dbo].[DimMst] AS [DimMst]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="StoneMst" EntityType="Self.StoneMst" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [StoneMst].[Style_Code] AS [Style_Code], 
+    [StoneMst].[StoneQlty_ID] AS [StoneQlty_ID], 
+    [StoneMst].[Stone_Gm] AS [Stone_Gm], 
+    [StoneMst].[Stone_Pcs] AS [Stone_Pcs], 
+    [StoneMst].[Stone_Crt] AS [Stone_Crt], 
+    [StoneMst].[Stone_Rate] AS [Stone_Rate], 
+    [StoneMst].[Stone_Amt] AS [Stone_Amt]
+    FROM [dbo].[StoneMst] AS [StoneMst]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__DimMst__DimQlty___276EDEB3" Association="Self.FK__DimMst__DimQlty___276EDEB3">
+      <End Role="DimQltyMst" EntitySet="DimQltyMst" />
+      <End Role="DimMst" EntitySet="DimMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DimMst__DimSubTy__286302EC" Association="Self.FK__DimMst__DimSubTy__286302EC">
+      <End Role="DimQlySubMst" EntitySet="DimQlySubMst" />
+      <End Role="DimMst" EntitySet="DimMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DimMst__Style_Co__267ABA7A" Association="Self.FK__DimMst__Style_Co__267ABA7A">
+      <End Role="ItemMst" EntitySet="ItemMst" />
+      <End Role="DimMst" EntitySet="DimMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMst__Brand_I__20C1E124" Association="Self.FK__ItemMst__Brand_I__20C1E124">
+      <End Role="BrandMst" EntitySet="BrandMst" />
+      <End Role="ItemMst" EntitySet="ItemMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMst__Cat_Id__21B6055D" Association="Self.FK__ItemMst__Cat_Id__21B6055D">
+      <End Role="CatMst" EntitySet="CatMst" />
+      <End Role="ItemMst" EntitySet="ItemMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMst__Certify__22AA2996" Association="Self.FK__ItemMst__Certify__22AA2996">
+      <End Role="CertifyMst" EntitySet="CertifyMst" />
+      <End Role="ItemMst" EntitySet="ItemMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMst__GoldTyp__24927208" Association="Self.FK__ItemMst__GoldTyp__24927208">
+      <End Role="GoldKrtMst" EntitySet="GoldKrtMst" />
+      <End Role="ItemMst" EntitySet="ItemMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemMst__Prod_ID__239E4DCF" Association="Self.FK__ItemMst__Prod_ID__239E4DCF">
+      <End Role="ProdMst" EntitySet="ProdMst" />
+      <End Role="ItemMst" EntitySet="ItemMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StoneMst__StoneQ__37A5467C" Association="Self.FK__StoneMst__StoneQ__37A5467C">
+      <End Role="StoneQltyMst" EntitySet="StoneQltyMst" />
+      <End Role="StoneMst" EntitySet="StoneMst" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StoneMst__Style___36B12243" Association="Self.FK__StoneMst__Style___36B12243">
+      <End Role="ItemMst" EntitySet="ItemMst" />
+      <End Role="StoneMst" EntitySet="StoneMst" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
