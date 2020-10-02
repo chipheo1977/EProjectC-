@@ -1,5 +1,7 @@
 create database jwellery
+go
 use jwellery
+go
 
 create table AdminloginMst
 (
@@ -10,57 +12,64 @@ go
 
 create table BrandMst
 (
-	Brand_ID nchar(10) primary key,
+	Brand_ID varchar(10) primary key,
 	Brand_Type varchar(50) not null 
 )
+go
 
 create table CatMst
 (
-	Cat_ID nchar(10) primary key,
+	Cat_ID varchar(10) primary key,
 	Cat_Name varchar(50) not null
 )
+go
 
 Create table CertifyMst
 (
-	Certify_ID nchar(10) primary key,
+	Certify_ID varchar(10) primary key,
 	Certify varchar(50) not null
 )
+go
 
 create table DimQltyMst
 (
-	DimQly_ID nchar(10) primary key,
-	DeimQly varchar(10) not null
+	DimQly_ID varchar(10) primary key,
+	DimQly varchar(10) not null
 )
+go
 
 create table DimQlySubMst
 (
-	DimSubType_ID nchar(10) primary key,
+	DimSubType_ID varchar(10) primary key,
 	DimQlty varchar(50) not null
 )
+go
 
 create table ProdMst
 (
-	Prod_ID nchar(10) primary key,
+	Prod_ID varchar(10) primary key,
 	Prod_Type varchar(50) not null
 )
+go
 
 create table GoldKrtMst
 (
-	GoldType_ID nchar(10) primary key,
+	GoldType_ID varchar(10) primary key,
 	Gold_Crt varchar(50) not null
 )
+go
 
 create table ItemMst
 (
 	Style_Code varchar(50) primary key,
 	Pairs Numeric(3,0) not null,
-	Brand_Id nchar(10) not null,
+	Brand_Id varchar(10) not null,
 	Quantity Numeric(18, 0) not null,
-	Cat_Id nchar(10),
+	Cat_Id varchar(10),
 	Prod_Quality varchar(50) not null,
-	Certify_ID nchar(10),
-	Prod_ID nchar(10),
-	GoldType_ID nchar(10),
+	Certify_ID varchar(10),
+	Prod_ID varchar(10),
+	GoldType_ID varchar(10),
 	Gold_Wt numeric(10, 3) not null,
 	Stone_Wt numeric(10, 2) not null,
 	Net_Gold numeric(10, 3) not null,
@@ -81,12 +90,13 @@ create table ItemMst
 	foreign key(Prod_ID) references ProdMst(Prod_ID),
 	foreign key(GoldType_ID) references GoldKrtMst(GoldType_ID),
 )
+go
 
 create table DimMst
 (
 	Style_Code varchar(50),
-	DimQlty_ID nchar(10),
-	DimSubType_ID nchar(10),
+	DimQlty_ID varchar(10),
+	DimSubType_ID varchar(10),
 	Dim_Crt numeric(10, 2) not null,
 	Dim_Pcs numeric(10, 2) not null,
 	Dim_Gm numeric(10, 2) not null,
@@ -98,17 +108,19 @@ create table DimMst
 	foreign key(DimQlty_ID) references DimQltyMst(DimQly_ID),
 	foreign key(DimSubType_ID) references DimQlySubMst(DimSubType_ID),
 )
+go
 
 create table StoneQltyMst
 (
-	StoneQlty_ID nchar(10) primary key,
+	StoneQlty_ID varchar(10) primary key,
 	StoneQlty varchar(50) not null
 )
+go
 
 create table StoneMst
 (
 	Style_Code varchar(50),
-	StoneQlty_ID nchar(10),
+	StoneQlty_ID varchar(10),
 	Stone_Gm numeric(10,2) not null,
 	Stone_Pcs numeric(10,2) not null,
 	Stone_Crt numeric(10,2) not null,
@@ -118,10 +130,11 @@ create table StoneMst
 	foreign key(Style_Code) references ItemMst(Style_Code),
 	foreign key(StoneQlty_ID) references StoneQltyMst(StoneQlty_ID),
 )
+go
 
 create table UserRegMst
 (
-	userID nchar(10) primary key,
+	userID varchar(10) primary key,
 	userFname text not null,
 	userLname text not null,
 	address varchar(max) not null,
@@ -133,36 +146,42 @@ create table UserRegMst
 	cdate nvarchar(50) not null,
 	password varchar(50) not null,
 )
+go
 
 create table DimInfoMst
 (
-	DimID nchar(10) primary key,
+	DimID varchar(10) primary key,
 	DimType varchar(50) not null,
 	DimCrt varchar(50) not null,
-	DimPrice nchar(50) not null,
+	DimPrice varchar(50) not null,
 	DimImg varchar(50) not null,
 )
+go
 
 create table Inquiry
 (
-	ID nchar(10) primary key,
+	ID varchar(10) primary key,
 	Name varchar(50) not null,
 	City varchar(50) not null,
-	Contact nchar(10) not null,
+	Contact varchar(10) not null,
 	EmailID varchar(50) not null,
 	Comment varchar(max) not null,
 	Cdate date not null
 )
+go
 
 create table JewelTypeMst
 (
 	ID nchar(10) primary key,
 	Jewellery_Type varchar(50) not null
 )
+go
 
 create table CartList
 (
-	ID nchar(10) primary key,
+	ID varchar(10) primary key,
 	Product_Name varchar(50) not null,
 	MRP numeric(10,2) not null
 )
+go
+

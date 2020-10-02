@@ -17,13 +17,13 @@ namespace EProject.Models.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProdMst()
         {
-            this.ItemMsts = new HashSet<ItemMst>();
+            this.ItemMst = new HashSet<ItemMst>();
         }
     
         public string Prod_ID { get; set; }
         public string Prod_Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ItemMst> ItemMsts { get; set; }
+        public virtual ICollection<ItemMst> ItemMst { get; set; }
     }
 }

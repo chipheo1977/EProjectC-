@@ -10,11 +10,11 @@ namespace EProject.Models.Repositories
 {
     public class Repository<T> : IReppository<T> where T : class
     {
-        protected jwelleryEntities _ctx;
+        protected jwelleryEntities2 _ctx;
         protected DbSet<T> tbl;
         public Repository()
         {
-            _ctx = new jwelleryEntities();
+            _ctx = new jwelleryEntities2();
             tbl = _ctx.Set<T>();
         }
             

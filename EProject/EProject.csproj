@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EProject</RootNamespace>
     <AssemblyName>EProject</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -26,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +56,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -62,11 +64,8 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -111,6 +110,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -130,80 +130,78 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\DiaQltyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DiamondQualityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DiamondQualitySubController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\AdminloginMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\BrandMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\CartList.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\CatMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\CertifyMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\DimInfoMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\DimMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\DimQltyMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\DimQlySubMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\GoldKrtMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\Inquiry.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\ItemMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EF\Jewelry.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Jewelry.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EF\Jewelry.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Jewelry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EF\Jewelry.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Jewelry.edmx</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\JewelTypeMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EF\jwellery.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jwellery.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EF\jwellery.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jwellery.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EF\jwellery.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jwellery.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\ProdMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\StoneMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\StoneQltyMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EF\sysdiagram.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EF\UserRegMst.cs">
-      <DependentUpon>Jewelry.tt</DependentUpon>
+      <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Repositories\IReppository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
@@ -218,32 +216,35 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\EF\Jewelry.Context.tt">
+    <Content Include="Models\EF\jwellery.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Jewelry.edmx</DependentUpon>
-      <LastGenOutput>Jewelry.Context.cs</LastGenOutput>
+      <DependentUpon>jwellery.edmx</DependentUpon>
+      <LastGenOutput>jwellery.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\EF\Jewelry.tt">
+    <Content Include="Models\EF\jwellery.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Jewelry.edmx</DependentUpon>
-      <LastGenOutput>Jewelry.cs</LastGenOutput>
+      <DependentUpon>jwellery.edmx</DependentUpon>
+      <LastGenOutput>jwellery.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
-    <EntityDeploy Include="Models\EF\Jewelry.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Jewelry.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\EF\Jewelry.edmx.diagram">
-      <DependentUpon>Jewelry.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaQlty\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaQlty\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaQlty\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQuality\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQuality\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQuality\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQualitySub\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQualitySub\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DiamondQualitySub\Edit.cshtml" />
+    <EntityDeploy Include="Models\EF\jwellery.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>jwellery.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EF\jwellery.edmx.diagram">
+      <DependentUpon>jwellery.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

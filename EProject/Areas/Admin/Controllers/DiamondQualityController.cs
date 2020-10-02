@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace EProject.Areas.Admin.Controllers
 {
-    public class DiaQltyController : Controller
+    public class DiamondQualityController : Controller
     {
         IReppository<DimQltyMst> qualities = new Repository<DimQltyMst>();
 

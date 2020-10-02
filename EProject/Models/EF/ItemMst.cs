@@ -17,8 +17,8 @@ namespace EProject.Models.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ItemMst()
         {
-            this.DimMsts = new HashSet<DimMst>();
-            this.StoneMsts = new HashSet<StoneMst>();
+            this.DimMst = new HashSet<DimMst>();
+            this.StoneMst = new HashSet<StoneMst>();
         }
     
         public string Style_Code { get; set; }
@@ -49,9 +49,9 @@ namespace EProject.Models.EF
         public virtual CertifyMst CertifyMst { get; set; }
         public virtual GoldKrtMst GoldKrtMst { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DimMst> DimMsts { get; set; }
+        public virtual ICollection<DimMst> DimMst { get; set; }
         public virtual ProdMst ProdMst { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StoneMst> StoneMsts { get; set; }
+        public virtual ICollection<StoneMst> StoneMst { get; set; }
     }
 }
