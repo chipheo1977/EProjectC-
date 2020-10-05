@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EProject.Models.EF.DimQltyMst>
+﻿@model IEnumerable<EProject.Models.EF.BrandMst>
 
 @{
     ViewBag.Title = "Index";
@@ -13,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            Name quality of diamond
+            Name of brand
         </th>
         <th></th>
     </tr>
@@ -21,11 +21,11 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.DimQly)
+            @Html.DisplayFor(modelItem => item.Brand_Type)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DimQly_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DimQly_ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Brand_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Brand_ID })
         </td>
     </tr>
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EProject.Models.Repositories
 {
-    public interface IReppository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> Get();
         IEnumerable<T> Get(Expression<Func<T, bool>> predicate);

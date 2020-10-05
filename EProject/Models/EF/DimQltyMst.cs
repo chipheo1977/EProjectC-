@@ -17,13 +17,13 @@ namespace EProject.Models.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DimQltyMst()
         {
-            this.DimMst = new HashSet<DimMst>();
+            this.DimMsts = new HashSet<DimMst>();
         }
     
         public string DimQly_ID { get; set; }
         public string DimQly { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DimMst> DimMst { get; set; }
+        public virtual ICollection<DimMst> DimMsts { get; set; }
     }
 }

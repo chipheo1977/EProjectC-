@@ -17,13 +17,13 @@ namespace EProject.Models.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StoneQltyMst()
         {
-            this.StoneMst = new HashSet<StoneMst>();
+            this.StoneMsts = new HashSet<StoneMst>();
         }
     
         public string StoneQlty_ID { get; set; }
         public string StoneQlty { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StoneMst> StoneMst { get; set; }
+        public virtual ICollection<StoneMst> StoneMsts { get; set; }
     }
 }

@@ -130,6 +130,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CertifyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DiamondController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondQualityController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondQualitySubController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -203,7 +206,7 @@
     <Compile Include="Models\EF\UserRegMst.cs">
       <DependentUpon>jwellery.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Repositories\IReppository.cs" />
+    <Compile Include="Models\Repositories\IRepository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -245,6 +248,12 @@
     <Content Include="Models\EF\jwellery.edmx.diagram">
       <DependentUpon>jwellery.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Diamond\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Certify\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Certify\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

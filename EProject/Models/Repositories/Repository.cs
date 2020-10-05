@@ -8,13 +8,13 @@ using System.Web;
 
 namespace EProject.Models.Repositories
 {
-    public class Repository<T> : IReppository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
-        protected jwelleryEntities2 _ctx;
+        protected jwelleryEntities _ctx;
         protected DbSet<T> tbl;
         public Repository()
         {
-            _ctx = new jwelleryEntities2();
+            _ctx = new jwelleryEntities();
             tbl = _ctx.Set<T>();
         }
             

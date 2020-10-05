@@ -35,22 +35,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                @if (Request.Cookies["loginCookie"] != null)
-                {
-                    <li class="nav-item d-none d-sm-inline-block">
-                        <a href="@Url.Action("LogoutCookie","Home")" class="nav-link">@Request.Cookies["loginCookie"].Value</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="nav-item d-none d-sm-inline-block">
-                        <a href="@Url.Action("LoginCookie","Home")" class="nav-link">Đăng nhập Cookie</a>
-                    </li>
-                }
-
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="@Url.Action("LoginCookie","Home")" class="nav-link">Đăng nhập Session</a>
-                </li>
+                
             </ul>
 
             <!-- SEARCH FORM -->

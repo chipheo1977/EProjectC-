@@ -8,14 +8,14 @@ using System.Web.Mvc;
 
 namespace EProject.Areas.Admin.Controllers
 {
-    public class DiamondQualityController : Controller
+    public class BrandController : Controller
     {
-        IRepository<DimQltyMst> qualities = new Repository<DimQltyMst>();
+        IRepository<BrandMst> db = new Repository<BrandMst>();
 
-        // GET: Admin/DiaQlty
+        // GET: Admin/Brand
         public ActionResult Index()
         {
-            var data = qualities.Get().ToList();
+            var data = db.Get().ToList();
             return View(data);
         }
 
@@ -24,11 +24,11 @@ namespace EProject.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(DimQltyMst qlty)
+        public ActionResult Create(BrandMst brand)
         {
             if (ModelState.IsValid)
             {
-                qualities.Add(qlty);
+                db.Add(brand);
                 return RedirectToAction("Index");
             }
             return View();
@@ -36,15 +36,15 @@ namespace EProject.Areas.Admin.Controllers
 
         public ActionResult Edit(string id)
         {
-            var data = qualities.Get(id);
+            var data = db.Get(id);
             return View(data);
         }
         [HttpPost]
-        public ActionResult Edit(DimQltyMst dim)
+        public ActionResult Edit(BrandMst brand)
         {
             if (ModelState.IsValid)
             {
-                qualities.Edit(dim);
+                db.Edit(brand);
                 return RedirectToAction("Index");
             }
             return View();
@@ -52,7 +52,7 @@ namespace EProject.Areas.Admin.Controllers
 
         public ActionResult Delete(string id)
         {
-            qualities.Remove(id);
+            db.Remove(id);
             return RedirectToAction("Index");
         }
     }

@@ -406,7 +406,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="Brand_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Brand_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ItemMst" Relationship="Self.FK__ItemMst__Brand_I__1FCDBCEB" FromRole="BrandMst" ToRole="ItemMst" />
+          <NavigationProperty Name="ItemMsts" Relationship="Self.FK__ItemMst__Brand_I__1FCDBCEB" FromRole="BrandMst" ToRole="ItemMst" />
         </EntityType>
         <EntityType Name="CartList">
           <Key>
@@ -422,7 +422,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="Cat_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Cat_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ItemMst" Relationship="Self.FK__ItemMst__Cat_Id__20C1E124" FromRole="CatMst" ToRole="ItemMst" />
+          <NavigationProperty Name="ItemMsts" Relationship="Self.FK__ItemMst__Cat_Id__20C1E124" FromRole="CatMst" ToRole="ItemMst" />
         </EntityType>
         <EntityType Name="CertifyMst">
           <Key>
@@ -430,7 +430,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="Certify_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Certify" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ItemMst" Relationship="Self.FK__ItemMst__Certify__21B6055D" FromRole="CertifyMst" ToRole="ItemMst" />
+          <NavigationProperty Name="ItemMsts" Relationship="Self.FK__ItemMst__Certify__21B6055D" FromRole="CertifyMst" ToRole="ItemMst" />
         </EntityType>
         <EntityType Name="DimInfoMst">
           <Key>
@@ -448,7 +448,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="DimQly_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DimQly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="DimMst" Relationship="Self.FK__DimMst__DimQlty___267ABA7A" FromRole="DimQltyMst" ToRole="DimMst" />
+          <NavigationProperty Name="DimMsts" Relationship="Self.FK__DimMst__DimQlty___267ABA7A" FromRole="DimQltyMst" ToRole="DimMst" />
         </EntityType>
         <EntityType Name="DimQlySubMst">
           <Key>
@@ -456,7 +456,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="DimSubType_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DimQlty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="DimMst" Relationship="Self.FK__DimMst__DimSubTy__276EDEB3" FromRole="DimQlySubMst" ToRole="DimMst" />
+          <NavigationProperty Name="DimMsts" Relationship="Self.FK__DimMst__DimSubTy__276EDEB3" FromRole="DimQlySubMst" ToRole="DimMst" />
         </EntityType>
         <EntityType Name="GoldKrtMst">
           <Key>
@@ -464,7 +464,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="GoldType_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Gold_Crt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ItemMst" Relationship="Self.FK__ItemMst__GoldTyp__239E4DCF" FromRole="GoldKrtMst" ToRole="ItemMst" />
+          <NavigationProperty Name="ItemMsts" Relationship="Self.FK__ItemMst__GoldTyp__239E4DCF" FromRole="GoldKrtMst" ToRole="ItemMst" />
         </EntityType>
         <EntityType Name="Inquiry">
           <Key>
@@ -508,9 +508,9 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           <NavigationProperty Name="CatMst" Relationship="Self.FK__ItemMst__Cat_Id__20C1E124" FromRole="ItemMst" ToRole="CatMst" />
           <NavigationProperty Name="CertifyMst" Relationship="Self.FK__ItemMst__Certify__21B6055D" FromRole="ItemMst" ToRole="CertifyMst" />
           <NavigationProperty Name="GoldKrtMst" Relationship="Self.FK__ItemMst__GoldTyp__239E4DCF" FromRole="ItemMst" ToRole="GoldKrtMst" />
-          <NavigationProperty Name="DimMst" Relationship="Self.FK__DimMst__Style_Co__25869641" FromRole="ItemMst" ToRole="DimMst" />
+          <NavigationProperty Name="DimMsts" Relationship="Self.FK__DimMst__Style_Co__25869641" FromRole="ItemMst" ToRole="DimMst" />
           <NavigationProperty Name="ProdMst" Relationship="Self.FK__ItemMst__Prod_ID__22AA2996" FromRole="ItemMst" ToRole="ProdMst" />
-          <NavigationProperty Name="StoneMst" Relationship="Self.FK__StoneMst__Style___2B3F6F97" FromRole="ItemMst" ToRole="StoneMst" />
+          <NavigationProperty Name="StoneMsts" Relationship="Self.FK__StoneMst__Style___2B3F6F97" FromRole="ItemMst" ToRole="StoneMst" />
         </EntityType>
         <EntityType Name="JewelTypeMst">
           <Key>
@@ -525,7 +525,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="Prod_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Prod_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ItemMst" Relationship="Self.FK__ItemMst__Prod_ID__22AA2996" FromRole="ProdMst" ToRole="ItemMst" />
+          <NavigationProperty Name="ItemMsts" Relationship="Self.FK__ItemMst__Prod_ID__22AA2996" FromRole="ProdMst" ToRole="ItemMst" />
         </EntityType>
         <EntityType Name="StoneQltyMst">
           <Key>
@@ -533,7 +533,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
           </Key>
           <Property Name="StoneQlty_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="StoneQlty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="StoneMst" Relationship="Self.FK__StoneMst__StoneQ__2C3393D0" FromRole="StoneQltyMst" ToRole="StoneMst" />
+          <NavigationProperty Name="StoneMsts" Relationship="Self.FK__StoneMst__StoneQ__2C3393D0" FromRole="StoneQltyMst" ToRole="StoneMst" />
         </EntityType>
         <EntityType Name="UserRegMst">
           <Key>
@@ -711,63 +711,63 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="jwelleryEntities2" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AdminloginMst" EntityType="Self.AdminloginMst" />
-          <EntitySet Name="BrandMst" EntityType="Self.BrandMst" />
-          <EntitySet Name="CartList" EntityType="Self.CartList" />
-          <EntitySet Name="CatMst" EntityType="Self.CatMst" />
-          <EntitySet Name="CertifyMst" EntityType="Self.CertifyMst" />
-          <EntitySet Name="DimInfoMst" EntityType="Self.DimInfoMst" />
-          <EntitySet Name="DimQltyMst" EntityType="Self.DimQltyMst" />
-          <EntitySet Name="DimQlySubMst" EntityType="Self.DimQlySubMst" />
-          <EntitySet Name="GoldKrtMst" EntityType="Self.GoldKrtMst" />
-          <EntitySet Name="Inquiry" EntityType="Self.Inquiry" />
-          <EntitySet Name="ItemMst" EntityType="Self.ItemMst" />
-          <EntitySet Name="JewelTypeMst" EntityType="Self.JewelTypeMst" />
-          <EntitySet Name="ProdMst" EntityType="Self.ProdMst" />
-          <EntitySet Name="StoneQltyMst" EntityType="Self.StoneQltyMst" />
-          <EntitySet Name="UserRegMst" EntityType="Self.UserRegMst" />
-          <EntitySet Name="DimMst" EntityType="Self.DimMst" />
-          <EntitySet Name="StoneMst" EntityType="Self.StoneMst" />
+        <EntityContainer Name="jwelleryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AdminloginMsts" EntityType="Self.AdminloginMst" />
+          <EntitySet Name="BrandMsts" EntityType="Self.BrandMst" />
+          <EntitySet Name="CartLists" EntityType="Self.CartList" />
+          <EntitySet Name="CatMsts" EntityType="Self.CatMst" />
+          <EntitySet Name="CertifyMsts" EntityType="Self.CertifyMst" />
+          <EntitySet Name="DimInfoMsts" EntityType="Self.DimInfoMst" />
+          <EntitySet Name="DimQltyMsts" EntityType="Self.DimQltyMst" />
+          <EntitySet Name="DimQlySubMsts" EntityType="Self.DimQlySubMst" />
+          <EntitySet Name="GoldKrtMsts" EntityType="Self.GoldKrtMst" />
+          <EntitySet Name="Inquiries" EntityType="Self.Inquiry" />
+          <EntitySet Name="ItemMsts" EntityType="Self.ItemMst" />
+          <EntitySet Name="JewelTypeMsts" EntityType="Self.JewelTypeMst" />
+          <EntitySet Name="ProdMsts" EntityType="Self.ProdMst" />
+          <EntitySet Name="StoneQltyMsts" EntityType="Self.StoneQltyMst" />
+          <EntitySet Name="UserRegMsts" EntityType="Self.UserRegMst" />
+          <EntitySet Name="DimMsts" EntityType="Self.DimMst" />
+          <EntitySet Name="StoneMsts" EntityType="Self.StoneMst" />
           <AssociationSet Name="FK__ItemMst__Brand_I__1FCDBCEB" Association="Self.FK__ItemMst__Brand_I__1FCDBCEB">
-            <End Role="BrandMst" EntitySet="BrandMst" />
-            <End Role="ItemMst" EntitySet="ItemMst" />
+            <End Role="BrandMst" EntitySet="BrandMsts" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__ItemMst__Cat_Id__20C1E124" Association="Self.FK__ItemMst__Cat_Id__20C1E124">
-            <End Role="CatMst" EntitySet="CatMst" />
-            <End Role="ItemMst" EntitySet="ItemMst" />
+            <End Role="CatMst" EntitySet="CatMsts" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__ItemMst__Certify__21B6055D" Association="Self.FK__ItemMst__Certify__21B6055D">
-            <End Role="CertifyMst" EntitySet="CertifyMst" />
-            <End Role="ItemMst" EntitySet="ItemMst" />
+            <End Role="CertifyMst" EntitySet="CertifyMsts" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__DimMst__DimQlty___267ABA7A" Association="Self.FK__DimMst__DimQlty___267ABA7A">
-            <End Role="DimQltyMst" EntitySet="DimQltyMst" />
-            <End Role="DimMst" EntitySet="DimMst" />
+            <End Role="DimQltyMst" EntitySet="DimQltyMsts" />
+            <End Role="DimMst" EntitySet="DimMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__DimMst__DimSubTy__276EDEB3" Association="Self.FK__DimMst__DimSubTy__276EDEB3">
-            <End Role="DimQlySubMst" EntitySet="DimQlySubMst" />
-            <End Role="DimMst" EntitySet="DimMst" />
+            <End Role="DimQlySubMst" EntitySet="DimQlySubMsts" />
+            <End Role="DimMst" EntitySet="DimMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__ItemMst__GoldTyp__239E4DCF" Association="Self.FK__ItemMst__GoldTyp__239E4DCF">
-            <End Role="GoldKrtMst" EntitySet="GoldKrtMst" />
-            <End Role="ItemMst" EntitySet="ItemMst" />
+            <End Role="GoldKrtMst" EntitySet="GoldKrtMsts" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__DimMst__Style_Co__25869641" Association="Self.FK__DimMst__Style_Co__25869641">
-            <End Role="ItemMst" EntitySet="ItemMst" />
-            <End Role="DimMst" EntitySet="DimMst" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
+            <End Role="DimMst" EntitySet="DimMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__ItemMst__Prod_ID__22AA2996" Association="Self.FK__ItemMst__Prod_ID__22AA2996">
-            <End Role="ProdMst" EntitySet="ProdMst" />
-            <End Role="ItemMst" EntitySet="ItemMst" />
+            <End Role="ProdMst" EntitySet="ProdMsts" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__StoneMst__Style___2B3F6F97" Association="Self.FK__StoneMst__Style___2B3F6F97">
-            <End Role="ItemMst" EntitySet="ItemMst" />
-            <End Role="StoneMst" EntitySet="StoneMst" />
+            <End Role="ItemMst" EntitySet="ItemMsts" />
+            <End Role="StoneMst" EntitySet="StoneMsts" />
           </AssociationSet>
           <AssociationSet Name="FK__StoneMst__StoneQ__2C3393D0" Association="Self.FK__StoneMst__StoneQ__2C3393D0">
-            <End Role="StoneQltyMst" EntitySet="StoneQltyMst" />
-            <End Role="StoneMst" EntitySet="StoneMst" />
+            <End Role="StoneQltyMst" EntitySet="StoneQltyMsts" />
+            <End Role="StoneMst" EntitySet="StoneMsts" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -775,8 +775,8 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="jwelleryModelStoreContainer" CdmEntityContainer="jwelleryEntities2">
-          <EntitySetMapping Name="AdminloginMst">
+        <EntityContainerMapping StorageEntityContainer="jwelleryModelStoreContainer" CdmEntityContainer="jwelleryEntities">
+          <EntitySetMapping Name="AdminloginMsts">
             <EntityTypeMapping TypeName="jwelleryModel.AdminloginMst">
               <MappingFragment StoreEntitySet="AdminloginMst">
                 <ScalarProperty Name="userName" ColumnName="userName" />
@@ -784,7 +784,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="BrandMst">
+          <EntitySetMapping Name="BrandMsts">
             <EntityTypeMapping TypeName="jwelleryModel.BrandMst">
               <MappingFragment StoreEntitySet="BrandMst">
                 <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
@@ -792,7 +792,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CartList">
+          <EntitySetMapping Name="CartLists">
             <EntityTypeMapping TypeName="jwelleryModel.CartList">
               <MappingFragment StoreEntitySet="CartList">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -801,7 +801,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CatMst">
+          <EntitySetMapping Name="CatMsts">
             <EntityTypeMapping TypeName="jwelleryModel.CatMst">
               <MappingFragment StoreEntitySet="CatMst">
                 <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
@@ -809,7 +809,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CertifyMst">
+          <EntitySetMapping Name="CertifyMsts">
             <EntityTypeMapping TypeName="jwelleryModel.CertifyMst">
               <MappingFragment StoreEntitySet="CertifyMst">
                 <ScalarProperty Name="Certify_ID" ColumnName="Certify_ID" />
@@ -817,7 +817,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DimInfoMst">
+          <EntitySetMapping Name="DimInfoMsts">
             <EntityTypeMapping TypeName="jwelleryModel.DimInfoMst">
               <MappingFragment StoreEntitySet="DimInfoMst">
                 <ScalarProperty Name="DimID" ColumnName="DimID" />
@@ -828,7 +828,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DimQltyMst">
+          <EntitySetMapping Name="DimQltyMsts">
             <EntityTypeMapping TypeName="jwelleryModel.DimQltyMst">
               <MappingFragment StoreEntitySet="DimQltyMst">
                 <ScalarProperty Name="DimQly_ID" ColumnName="DimQly_ID" />
@@ -836,7 +836,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DimQlySubMst">
+          <EntitySetMapping Name="DimQlySubMsts">
             <EntityTypeMapping TypeName="jwelleryModel.DimQlySubMst">
               <MappingFragment StoreEntitySet="DimQlySubMst">
                 <ScalarProperty Name="DimSubType_ID" ColumnName="DimSubType_ID" />
@@ -844,7 +844,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="GoldKrtMst">
+          <EntitySetMapping Name="GoldKrtMsts">
             <EntityTypeMapping TypeName="jwelleryModel.GoldKrtMst">
               <MappingFragment StoreEntitySet="GoldKrtMst">
                 <ScalarProperty Name="GoldType_ID" ColumnName="GoldType_ID" />
@@ -852,7 +852,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Inquiry">
+          <EntitySetMapping Name="Inquiries">
             <EntityTypeMapping TypeName="jwelleryModel.Inquiry">
               <MappingFragment StoreEntitySet="Inquiry">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -865,7 +865,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ItemMst">
+          <EntitySetMapping Name="ItemMsts">
             <EntityTypeMapping TypeName="jwelleryModel.ItemMst">
               <MappingFragment StoreEntitySet="ItemMst">
                 <ScalarProperty Name="Style_Code" ColumnName="Style_Code" />
@@ -893,7 +893,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="JewelTypeMst">
+          <EntitySetMapping Name="JewelTypeMsts">
             <EntityTypeMapping TypeName="jwelleryModel.JewelTypeMst">
               <MappingFragment StoreEntitySet="JewelTypeMst">
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -901,7 +901,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ProdMst">
+          <EntitySetMapping Name="ProdMsts">
             <EntityTypeMapping TypeName="jwelleryModel.ProdMst">
               <MappingFragment StoreEntitySet="ProdMst">
                 <ScalarProperty Name="Prod_ID" ColumnName="Prod_ID" />
@@ -909,7 +909,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StoneQltyMst">
+          <EntitySetMapping Name="StoneQltyMsts">
             <EntityTypeMapping TypeName="jwelleryModel.StoneQltyMst">
               <MappingFragment StoreEntitySet="StoneQltyMst">
                 <ScalarProperty Name="StoneQlty_ID" ColumnName="StoneQlty_ID" />
@@ -917,7 +917,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserRegMst">
+          <EntitySetMapping Name="UserRegMsts">
             <EntityTypeMapping TypeName="jwelleryModel.UserRegMst">
               <MappingFragment StoreEntitySet="UserRegMst">
                 <ScalarProperty Name="userID" ColumnName="userID" />
@@ -934,7 +934,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DimMst">
+          <EntitySetMapping Name="DimMsts">
             <EntityTypeMapping TypeName="jwelleryModel.DimMst">
               <MappingFragment StoreEntitySet="DimMst">
                 <ScalarProperty Name="Style_Code" ColumnName="Style_Code" />
@@ -949,7 +949,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="StoneMst">
+          <EntitySetMapping Name="StoneMsts">
             <EntityTypeMapping TypeName="jwelleryModel.StoneMst">
               <MappingFragment StoreEntitySet="StoneMst">
                 <ScalarProperty Name="Style_Code" ColumnName="Style_Code" />
@@ -976,7 +976,7 @@ warning 6002: The table/view 'jwellery.dbo.StoneMst' does not have a primary key
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

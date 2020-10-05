@@ -9,6 +9,7 @@ create table AdminloginMst
 	Password varchar(50) not null 
 )
 go
+insert into AdminloginMst values('admin', '1234')
 
 create table BrandMst
 (
