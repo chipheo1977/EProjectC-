@@ -8,11 +8,11 @@ using System.Web.Mvc;
 
 namespace EProject.Areas.Admin.Controllers
 {
-    public class StoneQualityController : Controller
+    public class ProductController : Controller
     {
-        IRepository<StoneQltyMst> db = new Repository<StoneQltyMst>();
+        IRepository<ProdMst> db = new Repository<ProdMst>();
 
-        // GET: Admin/StoneQuality
+        // GET: Admin/Product
         public ActionResult Index()
         {
             var data = db.Get().ToList();
@@ -24,11 +24,11 @@ namespace EProject.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(StoneQltyMst quality)
+        public ActionResult Create(ProdMst prod)
         {
             if (ModelState.IsValid)
             {
-                db.Add(quality);
+                db.Add(prod);
                 return RedirectToAction("Index");
             }
             return View();
@@ -40,11 +40,11 @@ namespace EProject.Areas.Admin.Controllers
             return View(data);
         }
         [HttpPost]
-        public ActionResult Edit(StoneQltyMst quality)
+        public ActionResult Edit(ProdMst prod)
         {
             if (ModelState.IsValid)
             {
-                db.Edit(quality);
+                db.Edit(prod);
                 return RedirectToAction("Index");
             }
             return View();
@@ -55,8 +55,5 @@ namespace EProject.Areas.Admin.Controllers
             db.Remove(id);
             return RedirectToAction("Index");
         }
-
-
-
     }
 }

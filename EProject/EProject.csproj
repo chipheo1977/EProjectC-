@@ -131,11 +131,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CertifyController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondQualityController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondQualitySubController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GoldCaratController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoneController.cs" />
     <Compile Include="Areas\Admin\Controllers\StoneQualityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -258,6 +261,16 @@
     </Content>
     <Content Include="Areas\Admin\Views\StoneQuality\Index.cshtml" />
     <Content Include="Areas\Admin\Views\StoneQuality\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StoneQuality\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GoldCarat\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GoldCarat\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\GoldCarat\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

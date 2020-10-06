@@ -163,4 +163,3 @@ C:\Users\ADMIN\Desktop\EProject\EProjectC-\EProject\obj\Debug\EProject.csproj.Co
 C:\Users\ADMIN\Desktop\EProject\EProjectC-\EProject\obj\Debug\EProject.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\EProject\EProjectC-\EProject\obj\Debug\EProject.dll
 C:\Users\ADMIN\Desktop\EProject\EProjectC-\EProject\obj\Debug\EProject.pdb
-C:\Users\ADMIN\Desktop\EProject\EProjectC-\EProject\obj\Debug\EProject.csprojAssemblyReference.cache
