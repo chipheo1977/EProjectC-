@@ -25,22 +25,22 @@ namespace EProject.Models.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AdminloginMst> AdminloginMsts { get; set; }
-        public virtual DbSet<BrandMst> BrandMsts { get; set; }
-        public virtual DbSet<CartList> CartLists { get; set; }
-        public virtual DbSet<CatMst> CatMsts { get; set; }
-        public virtual DbSet<CertifyMst> CertifyMsts { get; set; }
-        public virtual DbSet<DimInfoMst> DimInfoMsts { get; set; }
-        public virtual DbSet<DimQltyMst> DimQltyMsts { get; set; }
-        public virtual DbSet<DimQlySubMst> DimQlySubMsts { get; set; }
-        public virtual DbSet<GoldKrtMst> GoldKrtMsts { get; set; }
-        public virtual DbSet<Inquiry> Inquiries { get; set; }
-        public virtual DbSet<ItemMst> ItemMsts { get; set; }
-        public virtual DbSet<JewelTypeMst> JewelTypeMsts { get; set; }
-        public virtual DbSet<ProdMst> ProdMsts { get; set; }
-        public virtual DbSet<StoneQltyMst> StoneQltyMsts { get; set; }
-        public virtual DbSet<UserRegMst> UserRegMsts { get; set; }
-        public virtual DbSet<DimMst> DimMsts { get; set; }
-        public virtual DbSet<StoneMst> StoneMsts { get; set; }
+        public virtual DbSet<AdminloginMst> AdminloginMst { get; set; }
+        public virtual DbSet<BrandMst> BrandMst { get; set; }
+        public virtual DbSet<CartList> CartList { get; set; }
+        public virtual DbSet<CatMst> CatMst { get; set; }
+        public virtual DbSet<CertifyMst> CertifyMst { get; set; }
+        public virtual DbSet<DimInfoMst> DimInfoMst { get; set; }
+        public virtual DbSet<DimQltyMst> DimQltyMst { get; set; }
+        public virtual DbSet<DimQlySubMst> DimQlySubMst { get; set; }
+        public virtual DbSet<GoldKrtMst> GoldKrtMst { get; set; }
+        public virtual DbSet<Inquiry> Inquiry { get; set; }
+        public virtual DbSet<ItemMst> ItemMst { get; set; }
+        public virtual DbSet<JewelTypeMst> JewelTypeMst { get; set; }
+        public virtual DbSet<ProdMst> ProdMst { get; set; }
+        public virtual DbSet<StoneQltyMst> StoneQltyMst { get; set; }
+        public virtual DbSet<UserRegMst> UserRegMst { get; set; }
+        public virtual DbSet<DimMst> DimMst { get; set; }
+        public virtual DbSet<StoneMst> StoneMst { get; set; }
     }
 }

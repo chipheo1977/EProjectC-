@@ -136,6 +136,8 @@
     <Compile Include="Areas\Admin\Controllers\DiamondQualityController.cs" />
     <Compile Include="Areas\Admin\Controllers\DiamondQualitySubController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StoneController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StoneQualityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -241,6 +243,12 @@
     <Content Include="Areas\Admin\Views\DiamondQualitySub\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DiamondQualitySub\Create.cshtml" />
     <Content Include="Areas\Admin\Views\DiamondQualitySub\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Diamond\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Certify\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Certify\Create.cshtml" />
     <EntityDeploy Include="Models\EF\jwellery.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>jwellery.Designer.cs</LastGenOutput>
@@ -248,12 +256,8 @@
     <Content Include="Models\EF\jwellery.edmx.diagram">
       <DependentUpon>jwellery.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Brand\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Brand\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Diamond\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Certify\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Certify\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StoneQuality\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StoneQuality\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -284,6 +288,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Admin\" />
+    <Folder Include="Areas\Admin\Views\Stone\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
